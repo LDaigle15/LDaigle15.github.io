@@ -118,7 +118,7 @@ drawCircle(eachCircle);
         
         app.addUpdateable(window.opspark.game);
     }
-};
+;
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
