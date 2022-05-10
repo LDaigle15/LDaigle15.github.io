@@ -25,6 +25,11 @@ var init = function (window) {
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle()
+        circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+            physikz.addRandomVelocity(circle, canvas);
+            view.addChild(circle);
+            circles.push(circle);
+}
 
         // TODO 3 / 8 : Call the drawCircle() function 
 drawCircle(eachCircle);
@@ -55,7 +60,13 @@ drawCircle(eachCircle);
 
             // TODO 9 : Iterate over the array
            
-            
+            for(var i = 0; i < circles.length; i++){
+                var eachCircle = circles[i];
+                physikz.updatePosition(eachCircle);
+                game.checkCirclePosition(eachCircle);
+              
+              }
+              
         }
     
         /* 
@@ -63,7 +74,8 @@ drawCircle(eachCircle);
         Function. If that circle drifts off the screen, this Function should move
         it to the opposite side of the screen.
         */
-        game.checkCirclePosition = function(circle) {
+        game.checkCirclePosition = 
+        function(circle) {{
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             if ( circle.x > canvas.width ) {
@@ -71,23 +83,20 @@ drawCircle(eachCircle);
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            if (circle.x < 0) {
+            else if (circle.x < 0) {
                 circle.x = canvas.width;
             }
-            if (circle.y > canvas.height) {
-                circle.y = 0;
+             else if (circle.y > canvas.height) {
+                circle.y = canvas.height;
             }
-            if (circle.y < 0) {
+            else if (circle.y < 0) {
                 circle.y = canvas.height
             }
-            var loopsCompleted = 0; 
-            while (loopsCompleted < 10) {
-               drawCircle
-                loopsCompleted++
+            for(var i = 0; i < 10; i++) {
+                drawCircle()
             }
-            for (var loopsCompleted = 0; loopsCompleted < 10; loopsCompleted++) {
-                drawCircle
-                loopsCompleted++
+          
+              
             }
 
 

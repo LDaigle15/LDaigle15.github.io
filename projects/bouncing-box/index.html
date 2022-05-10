@@ -71,33 +71,22 @@
 			turn it around! 
 			*/
 			function update() {
+				positionX = positionX + speed;
  				/* Your Function Call Here */
 				 moveBoxTo(positionX = 0)
 
-				 /* Your Code to Increase positionX by 10 HERE*/
-				moveBoxTo(positionX = positionX + 10);
 				
-				// Frame 1
-				positionX = 0;		// positionX = 10
-				moveBoxTo(0)
-
-				// Frame 2
-				positionX = 0 + 10;			// positionX = 10
-				moveBoxTo(10)
-
-				// Frame 3
-				positionX = 10 + 10;		// positionX = 20
-				moveBoxTo(20)
-
-				// so on...
+				
 
 
 				var speed = 10;
 
 				if (positionX > boardWidth) {
-					
+					speed = speed * -1;
 				}
-
+				if (positionX < 0) {
+					speed ;
+				}
 			};
 
 			/* 
@@ -125,10 +114,8 @@
 					  positionX = 10 + 10;		// positionX = 20
 					  moveBoxTo(20)
 
-					  // so on...
-
-					 var speed = 0; 
-					  var speed = speed + 3;
+					if (handleBoxClick) { speed = speed + 3;
+					  }
 				}
 
 
