@@ -85,7 +85,7 @@
 					speed = speed * -1;
 				}
 				if (positionX < 0) {
-					speed = -speed * -1 ;
+					speed = speed * 1 ;
 				}
 			};
 
@@ -114,7 +114,8 @@
 					  positionX = 10 + 10;		// positionX = 20
 					  moveBoxTo(20)
 
-					if (handleBoxClick) { speed = speed + 3;
+					if (handleBoxClick) { 
+						speed +=3;
 					  }
 				}
 
